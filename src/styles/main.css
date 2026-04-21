@@ -1,0 +1,93 @@
+@import 'tailwindcss';
+
+/* Design tokens — extend Tailwind’s theme (Tailwind v4 @theme) */
+@theme {
+  /* Brand */
+  --color-brand-50: oklch(0.97 0.02 280);
+  --color-brand-100: oklch(0.93 0.05 280);
+  --color-brand-500: oklch(0.55 0.22 280);
+  --color-brand-600: oklch(0.48 0.24 280);
+  --color-brand-700: oklch(0.42 0.22 280);
+
+  /* Surfaces */
+  --color-surface-50: oklch(0.99 0.005 280);
+  --color-surface-100: oklch(0.97 0.01 280);
+  --color-surface-900: oklch(0.16 0.02 280);
+  --color-surface-950: oklch(0.12 0.02 280);
+
+  /* Global app font — Inter everywhere (loaded in index.html) */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --font-display: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-inter: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-soft: 0 22px 45px -12px oklch(0.35 0.08 280 / 0.18);
+  --shadow-card: 0 18px 40px -18px oklch(0.25 0.04 260 / 0.2);
+
+  /* Locals marketing gradient (orange → pink → purple) */
+  --color-locals-orange: oklch(0.72 0.17 55);
+  --color-locals-rose: oklch(0.68 0.2 15);
+  --color-locals-violet: oklch(0.58 0.22 290);
+
+  --animate-fade-up: fade-up 0.6s ease-out both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+:root {
+  --froy-gradient-brand: linear-gradient(
+    90deg,
+    #ff8a00 0%,
+    #ff8420 7.14%,
+    #ff7f30 14.29%,
+    #ff793b 21.43%,
+    #ff7344 28.57%,
+    #ff6d4c 35.71%,
+    #ff6653 42.86%,
+    #ff5f59 50%,
+    #ff585f 57.14%,
+    #ff5064 64.29%,
+    #ff4769 71.43%,
+    #ff3d6e 78.57%,
+    #ff3172 85.71%,
+    #ff2176 92.86%,
+    #ff007a 100%
+  );
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply font-sans;
+  }
+
+  body {
+    @apply bg-white font-sans text-slate-800 antialiased;
+  }
+
+  ::selection {
+    @apply bg-brand-500/20 text-slate-900;
+  }
+}
+
+@layer utilities {
+  /* Brand orange → magenta (CTAs, pills, gradient headlines) */
+  .bg-gradient-locals {
+    background-image: var(--froy-gradient-brand);
+  }
+
+  .text-gradient-locals {
+    background-image: var(--froy-gradient-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
