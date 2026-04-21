@@ -3,7 +3,7 @@ import Container from '@/components/ui/Container.vue'
 
 const left = {
   scene: '/images/testimonial/John.png',
-  avatar: '/images/testimonial/John.png',
+  avatar: '/images/testimonial/John-profile.png',
   name: 'John D.',
   role: 'Local Host',
   roleClass: 'text-[#FFA500]',
@@ -13,7 +13,7 @@ const left = {
 
 const right = {
   scene: '/images/testimonial/Sarah.png',
-  avatar: '/images/testimonial/Sarah.png',
+  avatar: '/images/testimonial/Sarah-profile.png',
   name: 'Sarah M.',
   role: 'Visitor',
   roleClass: 'text-[#E91E63]',
