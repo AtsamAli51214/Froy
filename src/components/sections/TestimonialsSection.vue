@@ -6,7 +6,7 @@ const left = {
   avatar: '/images/testimonial/John.png',
   name: 'John D.',
   role: 'Local Host',
-  roleClass: 'text-[#FF8C42]',
+  roleClass: 'text-[#FFA500]',
   quote:
     "I've lived in Jordaan for 10 years, but showing it to someone seeing it for the first time made me fall in love with my neighborhood all over again.",
 } as const
@@ -16,7 +16,7 @@ const right = {
   avatar: '/images/testimonial/Sarah.png',
   name: 'Sarah M.',
   role: 'Visitor',
-  roleClass: 'text-[#FF4D8D]',
+  roleClass: 'text-[#E91E63]',
   quote:
     'I was so tired of standard dating apps and lonely solo travel. FROY connected me with a local who showed me the best hidden stroopwafel bakery.',
 } as const
@@ -30,7 +30,7 @@ const communityAvatars = [
 <template>
   <section
     id="stories"
-    class="scroll-mt-24 rounded-t-[80px] bg-[#0F172B] py-20 sm:pt-28 sm:pb-0"
+    class="scroll-mt-24 rounded-t-[80px] bg-black py-20 sm:pt-28 sm:pb-0"
     aria-labelledby="testimonials-heading"
   >
     <Container>
@@ -49,7 +49,7 @@ const communityAvatars = [
       <div class="mt-14 grid gap-6 lg:grid-cols-3 lg:gap-6">
         <!-- Left testimonial -->
         <figure
-          class="flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] shadow-lg"
+          class="flex flex-col overflow-hidden rounded-[28px] border border-white/10 bg-[#121212] shadow-lg"
         >
           <img
             :src="left.scene"
@@ -63,7 +63,7 @@ const communityAvatars = [
               <img
                 :src="left.avatar"
                 alt=""
-                class="h-11 w-11 shrink-0 rounded-full object-cover ring-2 ring-white/20"
+                class="h-11 w-11 shrink-0 rounded-full object-cover ring-2 ring-[#FFA500]"
                 width="44"
                 height="44"
                 loading="lazy"
@@ -74,23 +74,26 @@ const communityAvatars = [
               </div>
             </div>
             <blockquote
-              class="mt-4 text-left font-inter text-sm leading-relaxed text-slate-200 sm:text-[15px]"
+              class="mt-4 text-left font-inter text-sm leading-relaxed text-[#A0A0A0] sm:text-[15px]"
             >
               “{{ left.quote }}”
             </blockquote>
           </figcaption>
         </figure>
 
-        <!-- Center: community stats -->
+        <div class="flex items-end justify-center ">
+            <!-- Center: Growing Fast -->
         <figure
-          class="flex h-[350px] flex-col justify-between overflow-hidden rounded-2xl border-t border-[#FF007A4D] bg-[linear-gradient(135deg,rgba(255,0,122,0.2)_0%,rgba(0,0,0,0)_100%)] p-6 text-center shadow-[var(--shadow-card)] sm:h-[390px] sm:p-8"
+          class="relative flex h-[350px] flex-col overflow-hidden rounded-[28px] border-t border-[#FF007A4D] bg-[#121212] text-center shadow-lg [background-image:linear-gradient(135deg,rgba(255,0,122,0.2)_0%,rgba(0,0,0,0)_100%)] w-full"
         >
-          <div class="flex min-h-0 flex-1 flex-col items-center justify-end">
-            <div class="flex items-center justify-center pl-4" aria-hidden="true">
+          <div
+            class="relative flex flex-1 flex-col items-center px-7 pb-9 pt-11 sm:px-8 sm:pb-10 sm:pt-12"
+          >
+            <div class="flex items-center justify-center pl-3" aria-hidden="true">
               <img
                 :src="communityAvatars[0]"
                 alt=""
-                class="relative z-10 h-14 w-14 rounded-full border-2 border-white/30 object-cover grayscale"
+                class="relative z-10 h-[52px] w-[52px] rounded-full border-2 border-[#1a1a1a] object-cover grayscale sm:h-14 sm:w-14"
                 width="56"
                 height="56"
                 loading="lazy"
@@ -98,27 +101,33 @@ const communityAvatars = [
               <img
                 :src="communityAvatars[1]"
                 alt=""
-                class="relative z-20 -ml-4 h-14 w-14 rounded-full border-2 border-white/30 object-cover grayscale"
+                class="relative z-20 -ml-[18px] h-[52px] w-[52px] rounded-full border-2 border-[#1a1a1a] object-cover grayscale sm:-ml-5 sm:h-14 sm:w-14"
                 width="56"
                 height="56"
                 loading="lazy"
               />
               <div
-                class="relative z-30 -ml-4 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-white bg-white text-sm font-bold text-[#0F172B] shadow-md"
+                class="relative z-30 -ml-[18px] flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border-2 border-[#1a1a1a] bg-white font-inter text-[13px] font-bold leading-none text-black sm:-ml-5 sm:h-14 sm:w-14 sm:text-sm"
               >
                 +500
               </div>
             </div>
-            <h3 class="mt-8 font-inter text-xl font-bold text-white sm:text-2xl">Growing Fast</h3>
-            <p class="mt-3 max-w-xs font-inter text-sm leading-relaxed text-white/95 sm:text-base">
+            <h3 class="mt-7 font-inter text-xl font-bold tracking-tight text-white sm:mt-8 sm:text-2xl">
+              Growing Fast
+            </h3>
+            <p
+              class="mt-3 max-w-[260px] font-inter text-sm leading-relaxed text-[#A0A0A0] sm:max-w-xs sm:text-[15px]"
+            >
               Over 500 active locals ready to meet in Amsterdam right now.
             </p>
           </div>
         </figure>
+        </div>
+      
 
-        <!-- Right testimonial -->
+        <!-- Right: Sarah testimonial -->
         <figure
-          class="flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] shadow-lg"
+          class="flex flex-col overflow-hidden rounded-[28px] border border-white/10 bg-[#121212] shadow-lg"
         >
           <img
             :src="right.scene"
@@ -132,7 +141,7 @@ const communityAvatars = [
               <img
                 :src="right.avatar"
                 alt=""
-                class="h-11 w-11 shrink-0 rounded-full object-cover ring-2 ring-pink-400/80"
+                class="h-11 w-11 shrink-0 rounded-full object-cover ring-2 ring-[#E91E63]"
                 width="44"
                 height="44"
                 loading="lazy"
@@ -143,7 +152,7 @@ const communityAvatars = [
               </div>
             </div>
             <blockquote
-              class="mt-4 text-left font-inter text-sm leading-relaxed text-slate-200 sm:text-[15px]"
+              class="mt-4 text-left font-inter text-sm leading-relaxed text-[#A0A0A0] sm:text-[15px]"
             >
               “{{ right.quote }}”
             </blockquote>
