@@ -27,7 +27,7 @@ const features = [
 </script>
 
 <template>
-  <section id="features" class="scroll-mt-24 bg-white py-20 sm:py-28" aria-labelledby="features-heading">
+  <section id="features" class="scroll-mt-24 bg-froy-surface py-20 sm:py-28" aria-labelledby="features-heading">
     <Container>
       <div class="mx-auto max-w-3xl text-center">
         <h2
@@ -47,7 +47,7 @@ const features = [
         <li
           v-for="item in features"
           :key="item.title"
-          class="rounded-[24px] bg-[#F8F9FA] p-8 transition hover:shadow-[0_18px_40px_-18px_rgba(15,23,42,0.12)]"
+          class="rounded-[24px] bg-white p-8 shadow-sm transition hover:shadow-[0_18px_40px_-18px_rgba(15,23,42,0.12)]"
         >
           <div
             class="mb-8 flex h-14 w-14 items-center justify-center rounded-xl text-white shadow-sm"

@@ -30,7 +30,7 @@ const communityAvatars = [
 <template>
   <section
     id="stories"
-    class="scroll-mt-24 rounded-t-[80px] bg-black py-20 sm:pt-28 sm:pb-0"
+    class="scroll-mt-24 rounded-t-[80px] bg-froy-night py-20 sm:pt-28 sm:pb-0"
     aria-labelledby="testimonials-heading"
   >
     <Container>

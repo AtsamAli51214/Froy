@@ -22,7 +22,7 @@ const navLinks = [
 </script>
 
 <template>
-  <footer class="bg-[linear-gradient(180deg,#ffffff_0%,#feedd7_100%)]">
+  <footer class="bg-froy-surface">
     <div class="relative border-t border-[#E8EAED]">
       <!-- Faint decorative squares behind content -->
       <div

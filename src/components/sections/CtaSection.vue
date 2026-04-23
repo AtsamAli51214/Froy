@@ -5,7 +5,7 @@ import Container from '@/components/ui/Container.vue'
 <template>
   <section
     id="final-cta"
-    class="scroll-mt-24 !bg-[linear-gradient(180deg,#ffffff_0%,#feedd7_100%)] pt-20 pb-24 sm:pt-28 sm:pb-32"
+    class="scroll-mt-24 bg-froy-surface pt-20 pb-24 sm:pt-28 sm:pb-32"
     aria-labelledby="final-cta-heading"
   >
     <Container class="flex flex-col items-center text-center">
