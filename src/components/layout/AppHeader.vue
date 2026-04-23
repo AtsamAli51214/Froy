@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onUnmounted, watch } from 'vue'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 
 import BaseButton from '@/components/ui/BaseButton.vue'
 import Container from '@/components/ui/Container.vue'
@@ -7,6 +7,13 @@ import { NAV_LINKS, SITE } from '@/lib/constants'
 import { useAppStore } from '@/stores/app'
 
 const app = useAppStore()
+const isScrolled = ref(false)
+
+const SCROLL_THRESHOLD_PX = 12
+
+function updateScrolled() {
+  isScrolled.value = window.scrollY > SCROLL_THRESHOLD_PX
+}
 
 function scrollToSection(id: string) {
   app.setMobileNavOpen(false)
@@ -21,14 +28,25 @@ watch(
   },
 )
 
+onMounted(() => {
+  updateScrolled()
+  window.addEventListener('scroll', updateScrolled, { passive: true })
+})
+
 onUnmounted(() => {
+  window.removeEventListener('scroll', updateScrolled)
   document.body.style.overflow = ''
 })
 </script>
 
 <template>
   <header
-    class="sticky top-0 z-50 border-b border-slate-200/60 bg-[linear-gradient(180deg,#ffffff_0%,#feedd7_100%)] backdrop-blur-md"
+    class="sticky top-0 z-50 border-b border-slate-200/60 backdrop-blur-md transition-colors duration-200 ease-out"
+    :class="
+      isScrolled
+        ? 'bg-white'
+        : 'bg-froy-surface'
+    "
   >
     <Container as="nav" class="flex min-h-[4.25rem] items-center justify-between gap-6 py-3">
       <a href="#top" class="flex shrink-0 items-center py-0.5">
@@ -118,7 +136,12 @@ onUnmounted(() => {
       <div
         v-show="app.mobileNavOpen"
         id="mobile-menu"
-        class="border-b border-slate-200/60 bg-[linear-gradient(180deg,#ffffff_0%,#feedd7_100%)] px-4 py-4 md:hidden"
+        class="border-b border-slate-200/60 px-4 py-4 transition-colors duration-200 ease-out md:hidden"
+        :class="
+          isScrolled
+            ? 'bg-white'
+            : 'bg-froy-surface'
+        "
       >
         <ul class="flex flex-col gap-1">
           <li v-for="link in NAV_LINKS" :key="link.id">

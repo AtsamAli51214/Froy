@@ -7,7 +7,7 @@ import { SITE } from '@/lib/constants'
 <template>
   <section
     id="top"
-    class="relative overflow-hidden border-b border-slate-200/50 bg-[linear-gradient(180deg,#ffffff_0%,#feedd7_100%)] pb-16 pt-12 sm:pb-24 sm:pt-16 lg:pb-28"
+    class="relative overflow-hidden border-b border-slate-200/50 bg-froy-surface pb-16 pt-12 sm:pb-24 sm:pt-16 lg:pb-28"
     aria-labelledby="hero-heading"
   >
     <!-- Faint ambient art (matches reference texture) -->
