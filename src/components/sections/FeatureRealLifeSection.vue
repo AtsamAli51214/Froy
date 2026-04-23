@@ -20,7 +20,7 @@ const bullets = [
 <template>
   <section
     id="how-it-works"
-    class="scroll-mt-24 border-t border-slate-100/80 bg-[#FAFAFA] py-20 sm:py-28"
+    class="scroll-mt-24 border-t border-slate-100/80 bg-[linear-gradient(180deg,#ffffff_0%,#feedd7_100%)] py-20 sm:py-28"
     aria-labelledby="real-life-heading"
   >
     <Container class="grid items-center gap-14 lg:grid-cols-2 lg:gap-16 xl:gap-20">

@@ -26,7 +26,7 @@ const locals = [
 <template>
   <section
     id="meet-locals"
-    class="scroll-mt-24 border-t border-slate-100/80 bg-[#FAFAFA] py-20 sm:py-28"
+    class="scroll-mt-24 border-t border-slate-100/80 bg-[linear-gradient(180deg,#ffffff_0%,#feedd7_100%)] py-20 sm:py-28"
     aria-labelledby="amsterdam-locals-heading"
   >
     <Container>
