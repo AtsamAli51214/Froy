@@ -26,7 +26,7 @@ const locals = [
 <template>
   <section
     id="meet-locals"
-    class="scroll-mt-24 border-t border-slate-100/80 bg-[linear-gradient(180deg,#ffffff_0%,#feedd7_100%)] py-20 sm:py-28"
+    class="scroll-mt-24 border-t border-slate-100/80 bg-froy-surface py-20 sm:py-28"
     aria-labelledby="amsterdam-locals-heading"
   >
     <Container>
@@ -46,7 +46,7 @@ const locals = [
         <li
           v-for="person in locals"
           :key="person.name"
-          class="rounded-2xl border border-slate-100/80 bg-[linear-gradient(180deg,rgba(250,250,250,0.5)_0%,rgba(250,250,250,0.8)_50%,#FAFAFA_100%)] p-8 text-center shadow-sm transition hover:shadow-md"
+          class="rounded-2xl border border-slate-100/80 bg-white p-8 text-center shadow-sm transition hover:shadow-md"
         >
           <img
             :src="person.img"
