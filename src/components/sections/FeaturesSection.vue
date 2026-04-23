@@ -19,7 +19,7 @@ const features = [
   {
     title: 'Genuine Friendships',
     description:
-      'We limit messaging to encourage quick, safe, offline meetups. Go grab a coffee, share a walk, and make a friend.',
+      'We limit messaging to encourage quick, safe, offline meetups. Go grab a coffee, a glass of wine or a cocktail, and make a real connection.',
     iconWrapper: 'bg-[#EA580C]',
     icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',
   },
@@ -39,7 +39,7 @@ const features = [
         <p
           class="mt-5 font-inter text-lg font-normal leading-relaxed tracking-normal text-[#475569] sm:text-[18px] sm:leading-7"
         >
-          We emphasize genuine face-to-face interactions over digital messaging.
+          We emphasize face-to-face interactions over digital messaging.
         </p>
       </div>
 

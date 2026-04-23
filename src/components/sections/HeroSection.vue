@@ -42,8 +42,7 @@ import { SITE } from '@/lib/constants'
         </h1>
 
         <p class="mt-6 max-w-xl text-lg leading-relaxed text-[#666666] sm:text-xl">
-          FROY connects you with locals for genuine offline friendships. Drop the endless messaging,
-          meet face-to-face, and experience the real Amsterdam.
+          FROY connects Visitors and Locals through the first round of drinks and creates genuine offline experiences.
         </p>
 
         <div class="mt-10 flex flex-wrap items-center gap-4">

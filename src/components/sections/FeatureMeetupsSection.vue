@@ -3,7 +3,7 @@ import Container from '@/components/ui/Container.vue'
 
 const features = [
   {
-    title: 'Curated Activities',
+    title: 'Connect in public venues',
     body: 'Choose from pre-selected safe public locations.',
   },
   {
@@ -34,8 +34,8 @@ const features = [
         <p
           class="mt-6 font-inter text-lg font-normal leading-relaxed tracking-normal text-[#475569] sm:text-[18px] sm:leading-7"
         >
-          Our platform ensures your safety while removing the friction of planning. Just pick an activity,
-          set a time, and meet.
+          Our platform uses verified profiles and removes the friction of planning. Just set a time, a
+          location and connect. If you're a Visitor, remember; First round's on you!
         </p>
 
         <ul class="mt-10 flex flex-col gap-5" role="list">

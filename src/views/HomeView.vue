@@ -9,7 +9,6 @@ import FeaturesSection from '@/components/sections/FeaturesSection.vue'
 import HeroSection from '@/components/sections/HeroSection.vue'
 import LocalsProfilesSection from '@/components/sections/LocalsProfilesSection.vue'
 import TestimonialsSection from '@/components/sections/TestimonialsSection.vue'
-import VibeSection from '@/components/sections/VibeSection.vue'
 </script>
 
 <template>
@@ -20,7 +19,6 @@ import VibeSection from '@/components/sections/VibeSection.vue'
       <FeaturesSection />
       <FeatureRealLifeSection />
       <FeatureMeetupsSection />
-      <VibeSection />
       <LocalsProfilesSection />
       <AppShowcaseSection />
       <TestimonialsSection />
