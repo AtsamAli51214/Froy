@@ -43,6 +43,11 @@
 }
 
 :root {
+  /* Page / header surface — matches app (white → warm cream) */
+  --froy-surface-gradient: linear-gradient(166.46deg, #ffffff 0%, #feedd7 162.67%);
+  /* Testimonials band */
+  --froy-night: #0b1222;
+
   --froy-gradient-brand: linear-gradient(
     90deg,
     #ff8a00 0%,
@@ -70,7 +75,8 @@
   }
 
   body {
-    @apply bg-white font-sans text-slate-800 antialiased;
+    @apply font-sans text-slate-800 antialiased;
+    background-image: var(--froy-surface-gradient);
   }
 
   ::selection {
@@ -79,6 +85,14 @@
 }
 
 @layer utilities {
+  .bg-froy-surface {
+    background-image: var(--froy-surface-gradient);
+  }
+
+  .bg-froy-night {
+    background-color: var(--froy-night);
+  }
+
   /* Brand orange → magenta (CTAs, pills, gradient headlines) */
   .bg-gradient-locals {
     background-image: var(--froy-gradient-brand);

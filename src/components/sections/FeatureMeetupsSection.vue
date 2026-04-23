@@ -19,7 +19,7 @@ const features = [
 
 <template>
   <section
-    class="border-t border-slate-100/80 bg-white py-20 sm:py-28"
+    class="border-t border-slate-100/80 bg-froy-surface py-20 sm:py-28"
     aria-labelledby="meetups-heading"
   >
     <Container class="grid items-center gap-14 lg:grid-cols-2 lg:gap-16 xl:gap-20">
@@ -42,7 +42,7 @@ const features = [
           <li
             v-for="item in features"
             :key="item.title"
-            class="flex gap-5 rounded-[24px] bg-[#F8F9FA] p-6 sm:p-7"
+            class="flex gap-5 rounded-[24px] bg-white p-6 shadow-sm sm:p-7"
           >
             <img
               src="/images/meetups-feature-icon.svg"

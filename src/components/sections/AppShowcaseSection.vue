@@ -23,7 +23,7 @@ const screens = [
 
 <template>
   <section
-    class="border-t border-slate-100/80 bg-[linear-gradient(180deg,#ffffff_0%,#feedd7_100%)] py-20 sm:py-28"
+    class="border-t border-slate-100/80 bg-froy-surface py-20 sm:py-28"
     aria-labelledby="showcase-heading"
   >
     <Container>
